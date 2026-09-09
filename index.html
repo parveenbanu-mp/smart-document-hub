@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Document Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.8.0/mammoth.browser.min.js"></script>
+    <script src="https://unpkg.com/docx@8.2.3/build/index.iife.js"></script>
+</head>
+
+<body>
+
+    <h1>Smart Document Converter</h1>
+
+    <p>Convert and type your documents easily.</p>
+    <div id="supportedFormats">
+        <strong>Supported Formats:</strong>
+        TXT • PDF • DOCX • JPG • PNG
+    </div>
+
+    <div id="dropArea">
+        <p>Drag & Drop your document here</p>
+        <p>or</p>
+        <input type="file" id="fileInput" accept=".txt,.pdf,.doc,.docx,.jpg,.jpeg,.png">
+    </div>
+    <br><br>
+
+    <button id="convertButton">Convert Document</button>
+
+    <div id="fileInfo">
+        <p id="fileName"></p>
+        <p id="fileSize"></p>
+    </div>
+    <textarea 
+        id="documentText" 
+        rows="15" 
+        cols="70"
+        placeholder="Extracted document text will appear here..."
+    ></textarea>
+    <div id="findReplace">
+
+        <input
+            type="text"
+            id="findInput"
+            placeholder="Find text"
+        >
+    
+        <input
+            type="text"
+            id="replaceInput"
+            placeholder="Replace with"
+        >
+    
+        <button id="findButton">Find</button>
+        <button id="replaceButton">Replace</button>
+        <button id="replaceAllButton">Replace All</button>
+    
+    </div>
+    <div id="textStats">
+        Words: <span id="wordCount">0</span>
+        &nbsp; | &nbsp;
+        Characters: <span id="charCount">0</span>
+    </div>
+    <div id="progressContainer">
+        <div id="progressBar"></div>
+    </div>
+    <br><br>
+
+    <button id="downloadButton">Download Text</button>
+    <button id="downloadWordButton">Download Word</button>
+    <button id="downloadPdfButton">Download PDF</button>
+    <button id="copyButton">Copy Text</button>
+    <button id="clearButton">Clear</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

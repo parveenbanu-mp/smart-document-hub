@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px 15px;
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 8px;
+    font-size: 32px;
+}
+
+body > p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+#supportedFormats {
+    display: inline-block;
+    background: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+#dropArea {
+    max-width: 700px;
+    margin: 0 auto 20px;
+    padding: 35px;
+    background: white;
+    border: 2px dashed #777;
+    border-radius: 12px;
+}
+
+#dropArea p {
+    margin: 8px;
+}
+
+input[type="file"] {
+    margin-top: 10px;
+}
+
+button {
+    padding: 11px 18px;
+    margin: 5px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    background: #333;
+    color: white;
+    font-size: 14px;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+#convertButton {
+    font-size: 16px;
+    padding: 12px 25px;
+}
+
+#fileInfo {
+    margin: 15px auto;
+}
+
+#documentText {
+    display: block;
+    width: 90%;
+    max-width: 900px;
+    min-height: 350px;
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: vertical;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+#findReplace {
+    margin: 15px auto;
+}
+
+#findInput,
+#replaceInput {
+    padding: 10px;
+    margin: 5px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+#textStats {
+    margin: 15px;
+    font-weight: bold;
+}
+
+#progressContainer {
+    width: 80%;
+    max-width: 700px;
+    height: 10px;
+    margin: 20px auto;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#progressBar {
+    width: 0%;
+    height: 100%;
+    transition: width 0.3s;
+}
+
+#downloadButton,
+#downloadWordButton,
+#downloadPdfButton,
+#copyButton {
+    background: #333;
+}
+
+#clearButton {
+    background: #777;
+}
+
+@media (max-width: 600px) {
+    #documentText {
+        width: 100%;
+    }
+
+    #findInput,
+    #replaceInput {
+        width: 90%;
+    }
+
+    button {
+        width: 90%;
+        max-width: 300px;
+    }
+}
